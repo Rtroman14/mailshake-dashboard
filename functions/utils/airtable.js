@@ -53,8 +53,6 @@ module.exports = class AirtableApi {
             } else {
                 return false;
             }
-
-            return clients.length ? clients.map((account) => account.fields) : false;
         } catch (error) {
             console.log("ERROR GETCLIENT() ---", error);
             return false;
@@ -178,7 +176,7 @@ module.exports = class AirtableApi {
             return contacts.length > 0 ? contacts[0] : false;
         } catch (error) {
             console.log("ERROR FINDTEXTCONTACTBYID() ---", error);
-            false;
+            return false;
         }
     }
 
@@ -201,7 +199,7 @@ module.exports = class AirtableApi {
             return contacts.length > 0 ? contacts[0] : false;
         } catch (error) {
             console.log("ERROR FINDTEXTCONTACT() ---", error);
-            false;
+            return false;
         }
     }
 
