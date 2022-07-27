@@ -1,32 +1,16 @@
-require("dotenv").config();
-
-const axios = require("axios");
-const moment = require("moment");
-
-const fetch = require("node-fetch");
-
-const users = require("./src/db/users");
-
 const { responseStatus } = require("./functions/utils/helpers");
+const { coldPhrase, coldWord, wrongInfo } = require("./functions/utils/keywords");
 
-const MailShakeApi = require("./functions/utils/mailshake");
-const AirtableApi = require("./functions/utils/airtable");
+const response = "remove me";
 
-// let { data } = await axios.get(`${url}1`);
+const status = responseStatus(response);
 
-const Airtable = new AirtableApi(process.env.AIRTABLE_API_KEY);
+console.log(status);
 
-// const response = "stop";
+// let coldRe = new RegExp(coldPhrase, "i");
 
-// const status = responseStatus(response);
+// if (coldRe.test(response)) {
+//     console.log("Cold");
+// }
 
-// console.log(status);
-
-(async () => {
-    try {
-        const res = await Airtable.getLocation("ZDAvMkrHGp1n1l8f6W9r");
-        console.log(res);
-    } catch (error) {
-        console.log(error);
-    }
-})();
+// console.log(coldPhrase);

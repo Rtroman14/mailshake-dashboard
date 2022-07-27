@@ -7,6 +7,7 @@ module.exports = {
         "No thank you.",
         "Unsubscribe",
         "Stop",
+        "Stop!",
         "No",
         "No, sorry",
         "Not interested",
@@ -25,6 +26,6 @@ module.exports = {
         "Take me off your list",
         "Please do not contact me again",
         "Do not contact me again",
-    ],
+    ].join("|"),
     wrongInfo: ["Wrong number", "Wrong #"].join("|"),
 };
