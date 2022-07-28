@@ -10,12 +10,12 @@ module.exports = async (event) => {
         const res = JSON.parse(event.body);
         const { full_name, workflow, message, contact_id, location } = res;
 
-        if (workflow.name === "Record Response") {
-            return {
-                statusCode: 200,
-                body: JSON.stringify({ res }),
-            };
-        }
+        // if (workflow.name === "Record Response") {
+        //     return {
+        //         statusCode: 200,
+        //         body: JSON.stringify({ res }),
+        //     };
+        // }
 
         const client = await Airtable.getLocation(location.id);
 
