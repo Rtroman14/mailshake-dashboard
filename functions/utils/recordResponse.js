@@ -33,7 +33,7 @@ module.exports = async (event) => {
                 Response: message.body,
                 "Response Date": new Date(),
                 Status,
-                Campaign: workflow.name,
+                // Campaign: workflow.name,
             };
 
             await Airtable.updateContact(client["Base ID"], contact.recordID, updatedFields);
