@@ -106,6 +106,7 @@ module.exports = {
 
         return null;
     },
+
     async slackNotification(channel, text, preview, url = "") {
         // notify me about this in Slack
         let accessory;
